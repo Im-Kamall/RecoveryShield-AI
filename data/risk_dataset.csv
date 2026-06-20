@@ -1,0 +1,9 @@
+user_id,new_device,unusual_location,multiple_failed_attempts,recent_password_change,risk_level
+U001,yes,yes,yes,no,High
+U002,no,no,no,no,Low
+U003,yes,no,yes,no,Medium
+U004,no,yes,yes,yes,High
+U005,no,no,yes,no,Medium
+U006,no,no,no,yes,Low
+U007,yes,yes,no,no,Medium
+U008,yes,yes,yes,yes,High
