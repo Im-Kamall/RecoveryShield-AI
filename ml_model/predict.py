@@ -1,33 +1,15 @@
-import streamlit as st
-from ml_model.predict import predict_risk
+import joblib
+import pandas as pd
 
-st.set_page_config(page_title="RecoveryShield AI", page_icon="🛡️")
+model = joblib.load("ml_model/model.pkl")
 
-st.title("🛡️ RecoveryShield AI")
-st.subheader("AI-Powered Suspicious Account Recovery Detection")
+def predict_risk(new_device, unusual_location, multiple_failed_attempts, recent_password_change):
+    input_data = pd.DataFrame([{
+        "new_device": 1 if new_device == "yes" else 0,
+        "unusual_location": 1 if unusual_location == "yes" else 0,
+        "multiple_failed_attempts": 1 if multiple_failed_attempts == "yes" else 0,
+        "recent_password_change": 1 if recent_password_change == "yes" else 0
+    }])
 
-st.write("This dashboard uses a machine learning model to predict account recovery risk.")
-
-user_id = st.text_input("User ID", "user123")
-
-new_device = st.selectbox("New Device?", ["no", "yes"])
-unusual_location = st.selectbox("Unusual Location?", ["no", "yes"])
-failed_attempts = st.selectbox("Multiple Failed Attempts?", ["no", "yes"])
-password_change = st.selectbox("Recent Password Change?", ["no", "yes"])
-
-if st.button("Predict Risk"):
-    risk = predict_risk(
-        new_device,
-        unusual_location,
-        failed_attempts,
-        password_change
-    )
-
-    st.metric("Predicted Risk Level", risk)
-
-    if risk == "High":
-        st.error("High Risk: Manual review or biometric verification required.")
-    elif risk == "Medium":
-        st.warning("Medium Risk: OTP or additional verification required.")
-    else:
-        st.success("Low Risk: Recovery can be approved.")
+    prediction = model.predict(input_data)[0]
+    return prediction
