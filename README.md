@@ -56,6 +56,87 @@ The system generates a dynamic risk score and triggers additional verification o
 * Faster Fraud Detection
 * Secure Digital Banking Experience
 
+
+
+
+
+\## Dashboard Preview
+
+
+
+\### Dashboard Home
+
+
+
+!\[Dashboard Home](docs/screenshots/dashboard\_home.png)
+
+
+
+\### Low Risk Prediction
+
+
+
+!\[Low Risk](docs/screenshots/low\_risk.png)
+
+
+
+\### Medium Risk Prediction
+
+
+
+!\[Medium Risk](docs/screenshots/medium\_risk.png)
+
+
+
+\### High Risk Prediction
+
+
+
+!\[High Risk](docs/screenshots/high\_risk.png)
+
+
+
+\## Features
+
+
+
+\* AI-powered Suspicious Account Recovery Detection
+
+\* Machine Learning Risk Prediction
+
+\* FastAPI Backend
+
+\* Streamlit Dashboard
+
+\* Real-Time Risk Assessment
+
+\* Banking Fraud Prevention
+
+\* Identity Trust Framework
+
+
+
+\## Future Enhancements
+
+
+
+\* Device Fingerprinting
+
+\* OTP Verification
+
+\* Face Verification
+
+\* Geolocation Risk Analysis
+
+\* Explainable AI
+
+\* Federated Learning
+
+\* SIEM Integration
+
+
+
 ## Author
 
 Kamal Solanki
+
