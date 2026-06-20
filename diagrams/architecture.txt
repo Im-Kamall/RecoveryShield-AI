@@ -1,0 +1,18 @@
+Customer Recovery Request
+        |
+        v
+Data Collection Layer
+(Device, IP, Location, Behavior)
+        |
+        v
+Risk Scoring Engine
+        |
+        v
+AI/ML Fraud Detection Model
+        |
+        v
+Decision Engine
+   /       |        \
+Low     Medium     High
+ |         |          |
+Approve   OTP     Manual Review

@@ -1,0 +1,17 @@
+User Requests Account Recovery
+        |
+        v
+Collect Device and User Data
+        |
+        v
+Generate Risk Score
+        |
+        v
+Evaluate Risk Level
+   /       |        \
+Low     Medium     High
+ |         |          |
+Approve   OTP     Biometric / Manual Review
+        |
+        v
+Secure Account Access
