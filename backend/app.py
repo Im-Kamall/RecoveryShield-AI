@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from risk_engine import calculate_risk_score
+from backend.risk_engine import calculate_risk_score
 
 app = FastAPI(title="RecoveryShield AI")
 
